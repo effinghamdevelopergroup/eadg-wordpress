@@ -12,6 +12,11 @@
   register_activation_hook(__FILE__, 'register_job_listing');
 
   function register_job_listing() {
+    $plugin = 'advanced-custom-fields/acf.php';
+
+    if (!is_plugin_active($plugin)) {
+      wp_die('Please enable advanced custom fields for Job Listings to work');
+    }
   }
 
   add_action('init', 'create_job_listing');
