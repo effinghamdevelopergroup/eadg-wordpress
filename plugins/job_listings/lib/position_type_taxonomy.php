@@ -1,4 +1,6 @@
 <?php
+  // Create a Taxonomy to Store the Type of Position
+  // Examples: Remote, Full Time, Contract, Remote
   function create_position_type_taxonomy() {
     $labels = array(
       'name'                       => 'Job Types',

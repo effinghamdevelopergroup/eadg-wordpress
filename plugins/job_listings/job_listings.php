@@ -20,8 +20,15 @@
     }
   }
 
+  // create the custom content type
   add_action('init', 'create_job_listing');
+
+  // create the technology taxonomy (i.e. .NET, C#, Ruby, Python, etc.)
   add_action('init', 'create_technology_taxonomy');
+
+  // create taxonomy for position type (i.e. contract, full time, remote)
   add_action('init', 'create_position_type_taxonomy');
+
+  // register extra fields for a job listing
   add_action('init', 'register_job_fields');
 

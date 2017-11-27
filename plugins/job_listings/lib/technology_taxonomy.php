@@ -1,4 +1,6 @@
 <?php
+  // Adds a taxonomy to store technologies a job listing is for.
+  // Examples: C#, Ruby, Python, SQL Server, Swift
   function create_technology_taxonomy() {
     $labels = array(
       'name'              => 'Technologies',

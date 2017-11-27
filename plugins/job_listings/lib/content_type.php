@@ -1,5 +1,5 @@
 <?php
-
+  // Creates a Post Content Type for Job Listings
   function create_job_listing() {
     $labels = array(
       'name'           => 'Job Listings',
