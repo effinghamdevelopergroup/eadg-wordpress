@@ -8,6 +8,7 @@
   require_once plugin_dir_path(__FILE__) . 'lib/content_type.php';
   require_once plugin_dir_path(__FILE__) . 'lib/position_type_taxonomy.php';
   require_once plugin_dir_path(__FILE__) . 'lib/technology_taxonomy.php';
+  require_once plugin_dir_path(__FILE__) . 'lib/register_company_field.php';
 
   register_activation_hook(__FILE__, 'register_job_listing');
 
@@ -22,3 +23,5 @@
   add_action('init', 'create_job_listing');
   add_action('init', 'create_technology_taxonomy');
   add_action('init', 'create_position_type_taxonomy');
+  add_action('init', 'register_job_fields');
+
