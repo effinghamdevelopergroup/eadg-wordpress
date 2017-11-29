@@ -10,6 +10,13 @@
     add_role('job_recruiter', 'Job Recruiter', $permissions);
   }
 
+  function remove_recruiter_role() {
+    $role = 'job_recruiter';
+    if (get_role($role)) {
+      remove_role($role);
+    }
+  }
+
   function add_permissions() {
     $roles = array('job_recruiter', 'editor', 'administrator');
 

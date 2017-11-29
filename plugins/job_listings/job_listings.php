@@ -12,6 +12,7 @@
   require_once plugin_dir_path(__FILE__) . 'lib/register_recruiter_role.php';
 
   register_activation_hook(__FILE__, 'register_job_listing');
+  register_deactivation_hook(__FILE__, 'deregister_job_listing');
 
   function register_job_listing() {
     $plugin = 'advanced-custom-fields/acf.php';
@@ -21,6 +22,10 @@
     }
 
     add_recruiter_role();
+  }
+
+  function deregister_job_listing() {
+    remove_recruiter_role();
   }
 
   // create the custom content type
