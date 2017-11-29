@@ -31,7 +31,7 @@
       'show_in_admin_bar'   => true,
       'menu_position'       => 5,
       'menu_icon'           => 'dashicons-admin-appearance',
-      'capability_type'     => 'post',
+      'capability_type'     => array('sm_job_listing', 'sm_job_listings'),
       'hierarchical'        => false,
       'supports'            => $supports,
       'has_archive'         => true,

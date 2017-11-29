@@ -9,6 +9,7 @@
   require_once plugin_dir_path(__FILE__) . 'lib/position_type_taxonomy.php';
   require_once plugin_dir_path(__FILE__) . 'lib/technology_taxonomy.php';
   require_once plugin_dir_path(__FILE__) . 'lib/register_company_field.php';
+  require_once plugin_dir_path(__FILE__) . 'lib/register_recruiter_role.php';
 
   register_activation_hook(__FILE__, 'register_job_listing');
 
@@ -18,6 +19,8 @@
     if (!is_plugin_active($plugin)) {
       wp_die('Please enable advanced custom fields for Job Listings to work');
     }
+
+    add_recruiter_role();
   }
 
   // create the custom content type
@@ -31,4 +34,8 @@
 
   // register extra fields for a job listing
   add_action('init', 'register_job_fields');
+
+  // Register Permissions
+  add_action('admin_init', 'add_permissions');
+  add_action('admin_init', 'add_admin_permissions');
 
